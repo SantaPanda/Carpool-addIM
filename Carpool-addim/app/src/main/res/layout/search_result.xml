@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/border"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_result_img"
+        android:src="@drawable/head_small"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="张三"
+        android:textSize="20dp"
+        android:id="@+id/search_result_name" android:layout_alignTop="@+id/search_result_img"
+        android:layout_toEndOf="@+id/search_result_img"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016年11月22日"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/search_result_day" android:layout_alignTop="@+id/search_result_name"
+        android:layout_toEndOf="@+id/search_result_name" android:layout_marginStart="20dp"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/4"
+        android:textSize="20dp"
+        android:id="@+id/search_result_per" android:layout_alignTop="@+id/search_result_name"
+        android:layout_toEndOf="@+id/search_result_day" android:layout_marginStart="20dp"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="汕头大学"
+        android:id="@+id/search_start"
+        android:layout_alignBottom="@+id/search_result_img"
+        android:layout_toEndOf="@+id/search_result_img"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="10：30"
+        android:id="@+id/search_time"
+        android:layout_toRightOf="@+id/search_start"
+        android:layout_alignBottom="@+id/search_start"
+        />
+    <ImageView
+        android:src="@drawable/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_right_img"
+        android:layout_below="@+id/search_result_day" android:layout_toEndOf="@+id/search_time"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="潮汕站"
+        android:id="@+id/search_end"
+        android:layout_alignBottom="@+id/search_time"
+        android:layout_toRightOf="@+id/search_right_img" />
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_pay"
+        android:id="@+id/search_pay" android:layout_below="@+id/search_right_img"
+        android:layout_toStartOf="@+id/search_start"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20块"
+        android:id="@+id/search_pay_show"
+        android:layout_alignTop="@+id/search_pay" android:layout_toEndOf="@+id/search_pay"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/search_link"
+        android:id="@+id/search_link" android:layout_alignBottom="@+id/search_pay_show"
+        android:layout_toEndOf="@+id/search_pay_show"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13800138000"
+        android:id="@+id/search_link_show"
+        android:layout_alignTop="@+id/search_link" android:layout_toEndOf="@+id/search_link"/>
+</RelativeLayout>

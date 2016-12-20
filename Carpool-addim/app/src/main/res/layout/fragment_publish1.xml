@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/publish_text1"
+        android:textSize="20dp"
+        android:id="@+id/publish_text1"
+        android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="45dp"/>
+    <EditText
+        android:textColor="@color/textColor"
+        android:id="@+id/publish_day"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textSize="20dp"
+        android:textColorHint="#AAAAAA"
+        android:hint="请输入..."
+        android:paddingLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_edittext"
+        android:layout_alignTop="@+id/publish_text1"
+        android:layout_toEndOf="@+id/publish_text1"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/publish_text2"
+        android:textSize="20dp"
+        android:id="@+id/publish_text2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/publish_text1" android:layout_toStartOf="@+id/publish_day"/>
+    <EditText
+        android:textColor="@color/textColor"
+        android:id="@+id/publish_start"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textSize="20dp"
+        android:textColorHint="#AAAAAA"
+        android:hint="请输入..."
+        android:paddingLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_edittext"
+        android:layout_alignTop="@+id/publish_text2" android:layout_toEndOf="@+id/publish_text2"/>
+    <TextView
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/publish_text3"
+        android:textSize="20dp"
+        android:id="@+id/publish_text3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/publish_text2" android:layout_toStartOf="@+id/publish_start"/>
+    <EditText
+        android:textColor="@color/textColor"
+        android:id="@+id/publish_end"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:textSize="20dp"
+        android:textColorHint="#AAAAAA"
+        android:hint="请输入..."
+        android:paddingLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_edittext"
+        android:layout_alignTop="@+id/publish_text3" android:layout_toEndOf="@+id/publish_text3"/>
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textColor="@color/textColor"
+            android:textSize="25dp"
+            android:text="@string/main_start"
+            android:id="@+id/main_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+        <EditText
+            android:textColor="@color/textColor"
+            android:textColorHint="#AAAAAA"
+            android:hint="请输入..."
+            android:paddingLeft="10dp"
+            android:background="@drawable/bg_edittext"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/main_start_input"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/main_start"
+            android:layout_alignEnd="@+id/main_start"/>
+        <ImageView
+            android:layout_marginTop="70dp"
+            android:src="@drawable/main_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_right_img"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_end"
+            android:textSize="25dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/main_end"
+
+            android:layout_alignTop="@+id/main_start" android:layout_toEndOf="@+id/main_right_img"/>
+        <EditText
+            android:textColor="@color/textColor"
+            android:textColorHint="#AAAAAA"
+            android:hint="请输入..."
+            android:paddingLeft="10dp"
+            android:background="@drawable/bg_edittext"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/main_end_input"
+            android:layout_alignTop="@+id/main_start_input"
+            android:layout_toEndOf="@+id/main_right_img"/>
+        <TextView
+            android:textColor="@color/textColor"
+            android:id="@+id/main_time"
+            android:textSize="20dp"
+            android:text="@string/main_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_right_img"
+            android:layout_alignStart="@+id/main_start_input"
+            android:layout_marginTop="32dp"/>
+        <EditText
+            android:textColor="@color/textColor"
+            android:textColorHint="#AAAAAA"
+            android:hint="日期"
+            android:paddingLeft="10dp"
+            android:background="@drawable/bg_edittext"
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_height="40dp"
+            android:id="@+id/main_day_input"
+            android:layout_alignBottom="@+id/main_time"
+            android:layout_toEndOf="@+id/main_time"/>
+
+        <Button
+            android:background="@drawable/sure_button"
+            android:textColor="@color/white"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_sure"
+            android:id="@+id/main_sure"
+            android:layout_below="@+id/main_day_input"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

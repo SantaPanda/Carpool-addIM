@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MyHaveFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" android:id="@+id/relativeLayout">
+            <ImageView
+                android:layout_margin="15dp"
+                android:src="@drawable/head_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/imageView"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:textSize="20dp"
+                android:textColor="@color/top"
+                android:id="@+id/my_have_name" android:layout_alignTop="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_marginTop="10dp"/>
+            <!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在XXX中完成X次拼车"
+                android:id="@+id/my_have_use_time"
+                android:layout_alignBottom="@+id/imageView" android:layout_toEndOf="@+id/imageView"
+                android:layout_marginBottom="5dp"/>
+                -->
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/top"
+            android:textSize="20dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/mypublish"
+            android:text="@string/my_have_publish"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:id="@+id/my_have_publish"
+            android:layout_below="@+id/relativeLayout" android:layout_alignParentStart="true"/>
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_have_publish_listView" android:layout_below="@+id/my_have_publish"
+            android:layout_centerHorizontal="true"/>
+        <Button android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/top"
+            android:textSize="20dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:drawableLeft="@drawable/myjoin"
+            android:text="@string/my_have_join"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:id="@+id/my_have_join"
+            android:layout_below="@id/my_have_publish_listView"/>
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_have_join_listView" android:layout_below="@+id/my_have_join"
+            android:layout_centerHorizontal="true"/>
+        <!--
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/top"
+            android:textSize="20dp"
+            android:background="@drawable/border"
+            android:text="@string/my_have_done"
+            android:id="@+id/my_have_done"
+            android:layout_below="@id/my_have_join_listView"/>
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_have_done_listView" android:layout_below="@+id/my_have_done"
+            android:layout_centerHorizontal="true"/>
+            -->
+    </RelativeLayout>
+
+</FrameLayout>
