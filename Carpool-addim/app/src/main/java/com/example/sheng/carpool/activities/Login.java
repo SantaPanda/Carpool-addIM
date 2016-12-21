@@ -256,7 +256,7 @@ public class Login extends Activity {
                     Intent intent3 = new Intent();
                     intent3.setClass(Login.this,Register.class);
                     Login.this.startActivity(intent3);
-                    finish();
+                   // finish();
                     break;
                 default:
                     break;

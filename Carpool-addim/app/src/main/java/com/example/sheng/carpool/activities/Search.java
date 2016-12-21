@@ -54,6 +54,9 @@ public class Search extends Activity {
                 String carpool = new Gson().toJson(carpoolInfo);
                 //Toast.makeText(getApplicationContext(),carpool,Toast.LENGTH_SHORT).show();
                 intent.putExtra("carpool",carpool);
+
+                intent.putExtra("type","search");
+
                 intent.setClass(Search.this,Search_case.class);
                 Search.this.startActivity(intent);
                // finish();

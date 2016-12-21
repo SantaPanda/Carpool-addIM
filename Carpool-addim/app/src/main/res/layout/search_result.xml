@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1/4"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:id="@+id/search_result_per" android:layout_alignTop="@+id/search_result_name"
         android:layout_toEndOf="@+id/search_result_day" android:layout_marginStart="20dp"/>
     <TextView

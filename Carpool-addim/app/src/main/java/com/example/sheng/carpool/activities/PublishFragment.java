@@ -113,6 +113,36 @@ public class PublishFragment extends Fragment {
         str_publish_info = publish_info.getText().toString();
     }
 
+    private boolean isEmpty(){
+        if(str_publish_day.equals("")){
+            return false;
+        }
+        else if(str_publish_start.equals("")){
+            return false;
+        }
+        else if(str_publish_end.equals("")){
+            return false;
+        }
+        else if(str_publish_time.equals("")){
+            return false;
+        }
+        else if(str_publish_pay.equals("")){
+            return false;
+        }
+        else if(str_publish_people.equals("")){
+            return false;
+        }
+        else if(str_publish_have_people.equals("")){
+            return false;
+        }else if(str_publish_phone.equals("")){
+            return false;
+        }
+        else if(str_publish_info.equals("")){
+            return false;
+        }
+        return true;
+    }
+
     private void publishServer(){
         getValue();
         final String url = PublicData.publishServer;
@@ -157,12 +187,26 @@ public class PublishFragment extends Fragment {
         public void onClick(View v){
             switch (v.getId()){
                 case R.id.publish_sure:
+
                     getAccount();
-                    if(!account.equals("")){
-                        publishServer();
+                    getValue();
+                    if(isEmpty()){
+                        if(!account.equals("")){
+                            if(!str_publish_people.equals("")&&!str_publish_have_people.equals("")){
+                                if(Integer.parseInt(str_publish_people)>Integer.parseInt(str_publish_have_people)){
+                                    publishServer();
+                                }
+                                else {
+                                    Toast.makeText(getContext(),"已有人数不少于总人数,不能发布",Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }
+                        else {
+                            PublicData.login(getContext());
+                        }
                     }
                     else {
-                        PublicData.login(getContext());
+                        Toast.makeText(getContext(),"请填写所有",Toast.LENGTH_SHORT).show();
                     }
                     break;
                 default:

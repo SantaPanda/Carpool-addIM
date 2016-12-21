@@ -44,7 +44,12 @@ public class CommentInfoListAdapter extends ArrayAdapter<CommentInfo> {
         final CommentInfo commentInfo = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId,null);
         componentInit(view);
-        case_in_name.setText(commentInfo.getName());
+        if(!commentInfo.getName().equals("")){
+            case_in_name.setText(commentInfo.getName());
+        }
+        else {
+            case_in_name.setText(commentInfo.getAccount());
+        }
         case_in_phone.setText(commentInfo.getDetail());
         case_in_button.setTag(position);
         case_in_button.setOnClickListener(new View.OnClickListener() {

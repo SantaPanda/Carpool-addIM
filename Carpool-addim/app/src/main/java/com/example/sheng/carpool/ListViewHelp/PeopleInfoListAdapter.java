@@ -39,7 +39,12 @@ public class PeopleInfoListAdapter extends ArrayAdapter<MyInfo> {
         final MyInfo myInfo = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId,null);
         componentInit(view);
-        case_in_name.setText(myInfo.getName());
+        if(!myInfo.getName().equals("")){
+            case_in_name.setText(myInfo.getName());
+        }
+        else {
+            case_in_name.setText(myInfo.getAccount());
+        }
         case_in_phone.setText(myInfo.getPhone());
         case_in_button.setTag(position);
         case_in_button.setOnClickListener(new View.OnClickListener() {

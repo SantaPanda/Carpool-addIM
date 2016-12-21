@@ -88,6 +88,7 @@ public class MyHaveFragment extends Fragment {
                 //String carpool = JsonOperation.jsonObjectStructure(carpoolInfo);
                 String carpool = new Gson().toJson(carpoolInfo);
                 intent.putExtra("carpool",carpool);
+                intent.putExtra("type","myPublish");
                 intent.setClass(getContext(),Search_case.class);
                 getContext().startActivity(intent);
             }
@@ -106,6 +107,7 @@ public class MyHaveFragment extends Fragment {
                 //String carpool = JsonOperation.jsonObjectStructure(carpoolInfo);
                 String carpool = new Gson().toJson(carpoolInfo);
                 intent.putExtra("carpool",carpool);
+                intent.putExtra("type","myAdd");
                 intent.setClass(getContext(),Search_case.class);
                 getContext().startActivity(intent);
             }

@@ -99,6 +99,17 @@ public class Search_case extends Activity {
         setContentView(R.layout.activity_search_case);
         final Intent intent = getIntent();
         String data = intent.getStringExtra("carpool");
+
+        String type = intent.getStringExtra("type");
+        componentInit();
+        if(type.equals("myPublish")){
+            case_join_in.setVisibility(View.INVISIBLE);
+        }
+        if(type.equals("myAdd")){
+            case_join_in.setVisibility(View.INVISIBLE);
+        }
+
+
         CarpoolInfo carpoolInfo = null;
         if(!data.equals("")){
             carpoolInfo = AnalyseJson.getInstance(data,CarpoolInfo.class);
@@ -337,8 +348,18 @@ public class Search_case extends Activity {
     }
 
     private void setValue(CarpoolInfo carpoolInfo){
+        /*
         case_public_name.setText(carpoolInfo.getName());
         case_people.setText(carpoolInfo.getHaveNum()+"/"+carpoolInfo.getHaveNum());
+        */
+
+        if(!carpoolInfo.getName().equals("")){
+            case_public_name.setText("发起人:"+carpoolInfo.getName());
+        }else {
+            case_public_name.setText("发起人:"+carpoolInfo.getAccount());
+        }
+        case_people.setText("人数:"+carpoolInfo.getHaveNum()+"/"+carpoolInfo.getTotalNum());
+
         //case_good_show.setText(carpoolInfo.ge);
        // case_bad_show;
         //case_credit_show;
