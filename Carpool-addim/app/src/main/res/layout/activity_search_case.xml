@@ -1,163 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/head_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/case_publish_img"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/publish_guy"
+                    android:layout_gravity="bottom"/>
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="发起人：张三"
+                    android:textSize="20dp"
+                    android:id="@+id/case_public_name" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/people_numbers"
+                    android:layout_gravity="bottom"/>
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="人数：1/4"
+                    android:textSize="20dp"
+                    android:id="@+id/case_people" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
-    <ImageView
-        android:src="@drawable/head_small"
-        android:layout_margin="10dp"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/case_publish_img"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="发起人：张三"
-        android:textSize="22dp"
-        android:id="@+id/case_public_name" android:layout_alignTop="@+id/case_publish_img"
-        android:layout_toEndOf="@+id/case_publish_img"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="信用度:"
-        android:textSize="22dp"
-        android:layout_marginTop="15dp"
-        android:id="@+id/case_public_credit" android:layout_below="@+id/case_public_name"
-        android:layout_toEndOf="@+id/case_publish_img"/>
-    <ImageView
-        android:src="@drawable/good"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/case_public_good" android:layout_alignBottom="@+id/case_public_credit"
-        android:layout_toEndOf="@+id/case_public_credit"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_marginStart="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="人数：1/4"
-        android:textSize="20dp"
-        android:id="@+id/case_people"
-        android:layout_alignBottom="@+id/case_public_name" android:layout_toEndOf="@+id/case_public_name"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="8"
-        android:textSize="20dp"
-        android:layout_marginStart="10dp"
-        android:id="@+id/case_good_show" android:layout_alignBottom="@+id/case_public_good"
-        android:layout_toEndOf="@+id/case_public_good"/>
-    <ImageView
-        android:src="@drawable/bad"
-        android:layout_marginStart="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/case_public_bad" android:layout_alignBottom="@+id/case_public_good"
-        android:layout_toEndOf="@+id/case_good_show"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:textSize="20dp"
-        android:layout_marginStart="10dp"
-        android:id="@+id/case_bad_show" android:layout_alignBottom="@+id/case_good_show"
-        android:layout_toEndOf="@+id/case_public_bad"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="80%"
-        android:textSize="22dp"
-        android:layout_marginStart="20dp"
-        android:textColor="#ff5555"
-        android:id="@+id/case_credit_show" android:layout_alignBottom="@+id/case_bad_show"
-        android:layout_toEndOf="@+id/case_bad_show"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="汕头大学"
-        android:textSize="22dp"
-        android:id="@+id/case_start" android:layout_below="@+id/case_publish_img"
-        android:layout_alignStart="@+id/case_publish_img" android:layout_marginTop="36dp"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10:30"
-        android:textSize="20dp"
-        android:layout_marginStart="20dp"
-        android:id="@+id/case_time" android:layout_alignBottom="@+id/case_start"
-        android:layout_toEndOf="@+id/case_start"/>
-    <ImageView
-        android:src="@drawable/right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/case_right_img"
-        android:layout_marginStart="10dp" android:layout_below="@+id/case_publish_img"
-        android:layout_toEndOf="@+id/case_time" android:layout_marginTop="27dp"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="潮汕站"
-        android:textSize="22dp"
-        android:id="@+id/case_end"
-        android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/case_start" android:layout_toEndOf="@+id/case_right_img"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="出发日期:"
-        android:textSize="20dp"
-        android:id="@+id/case_text1" android:layout_below="@+id/case_right_img"
-        android:layout_alignStart="@+id/case_start" android:layout_marginTop="20dp"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_marginRight="30dp"
+        android:visibility="gone">
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信用度:"
+            android:textSize="22dp"
+            android:id="@+id/case_public_credit" />
+        <ImageView
+            android:src="@drawable/good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/case_public_good" />
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:textSize="20dp"
+            android:id="@+id/case_good_show" />
+        <ImageView
+            android:src="@drawable/bad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/case_public_bad" />
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="20dp"
+            android:id="@+id/case_bad_show" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80%"
+            android:textSize="22dp"
+            android:textColor="#ff5555"
+            android:id="@+id/case_credit_show"
+            />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:id="@+id/case_day" android:layout_alignBottom="@+id/case_text1"
-        android:layout_toEndOf="@+id/case_text1"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="联系方式:"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:id="@+id/case_text2" android:layout_below="@+id/case_text1"
-        android:layout_alignStart="@+id/case_text1"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_marginRight="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:id="@+id/case_phone"
-        android:layout_alignBottom="@+id/case_text2" android:layout_toEndOf="@+id/case_text2"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:gravity="right"
-        android:paddingRight="12dp"
-        android:text="价格:"
-        android:id="@+id/case_text3" android:layout_below="@+id/case_text2"
-        android:layout_alignEnd="@+id/case_text2"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出发日期:"
+            android:textSize="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/case_text1" />
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:id="@+id/case_day" />
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:30"
+            android:textSize="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/case_time" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:id="@+id/case_pay"
-        android:layout_alignBottom="@+id/case_text3" android:layout_toEndOf="@+id/case_text3"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/location"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起始点:"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"/>
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="汕头大学"
+            android:textSize="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:id="@+id/case_start" />
+        <ImageView
+            android:src="@drawable/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/case_right_img"
+            />
+        <TextView
+            android:textColor="@color/textColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="潮汕站"
+            android:textSize="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:id="@+id/case_end" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/phone"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:textColor="@color/textColor"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="联系方式:"
+                android:textSize="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/case_text2" />
+            <TextView
+                android:textColor="@color/textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/case_phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="1dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/money"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:textColor="@color/textColor"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:paddingRight="12dp"
+                android:text="价格:"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/case_text3"
+                />
+            <TextView
+                android:textColor="@color/textColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/case_pay"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="1dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/message"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:textColor="@color/textColor"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="备注:"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/case_text4" />
+            <TextView
+                android:textColor="@color/textColor"
+                android:lines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/case_show" />
+        </LinearLayout>
+    </LinearLayout>
+
     <Button
         android:textColor="@color/white"
         android:layout_width="match_parent"
@@ -165,35 +312,15 @@
         android:text="其他拼车成员"
         android:gravity="center"
         android:background="@color/top"
-        android:id="@+id/case_others"
-        android:layout_below="@+id/case_show" android:layout_alignParentStart="true"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:gravity="right"
-        android:paddingRight="12dp"
-        android:text="备注:"
-        android:id="@+id/case_text4" android:layout_below="@+id/case_text3"
-        android:layout_alignStart="@+id/case_text3"/>
-    <TextView
-        android:textColor="@color/textColor"
-        android:layout_marginRight="30dp"
-        android:lines="4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/case_show" android:layout_alignTop="@+id/case_text4"
-        android:layout_toEndOf="@+id/case_text4"/>
+        android:id="@+id/case_others" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:descendantFocusability="blocksDescendants"
-        android:id="@+id/case_in_listview" android:layout_below="@+id/case_others" android:layout_alignParentStart="true"/>
+        android:id="@+id/case_in_listview"/>
     <Button
         android:textColor="@color/white"
-        android:layout_below="@+id/case_in_listview" android:layout_alignParentStart="true"
         android:gravity="center"
         android:text="留言"
         android:background="@color/top"
@@ -201,32 +328,34 @@
         android:layout_width="match_parent" android:layout_height="40dp"/>
     <ListView
         android:id="@+id/case_have_massage"
-        android:layout_below="@id/case_massage"
-        android:layout_alignParentStart="true"
-        android:layout_width="match_parent" android:layout_height="wrap_content">
-    </ListView>
-    <RelativeLayout
-        android:layout_below="@id/case_have_massage"
         android:layout_width="match_parent"
+        android:descendantFocusability="blocksDescendants"
         android:layout_height="wrap_content">
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="1dp"
+        android:gravity="bottom">
         <Button
-            android:layout_alignParentLeft="true"
-            android:layout_margin="10dp"
             android:id="@+id/case_send_massage"
+            android:background="#5B5B5B"
             android:textSize="20dp"
             android:text="留言"
             android:textColor="@color/white"
-            android:background="@color/top"
-            android:layout_width="60dp"
-            android:layout_height="30dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"/>
         <Button
-            android:layout_marginRight="10dp"
-            android:layout_alignParentRight="true"
             android:id="@+id/case_join_in"
             android:text="我加入"
             android:textColor="@color/white"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:background="#ff5555"
-            android:layout_width="100dp" android:layout_height="50dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            />
     </RelativeLayout>
-</RelativeLayout>
+</LinearLayout>

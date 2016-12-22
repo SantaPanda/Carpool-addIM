@@ -109,6 +109,12 @@ public class Login extends Activity {
         }
     }
 
+    @Override
+    protected void onStop(){
+        super.onStop();
+        unregisterReceiver(checkInternet.receiver);
+    }
+
     //存储token到SharedPreference
     private void saveTokenToLocal(){
         editor = pref.edit();
@@ -130,6 +136,7 @@ public class Login extends Activity {
                 if(response.equals(PublicData.TRUE_RETURN)){
                     //保存账号和密码要本地
                     saveAccountPwToLoacl();
+                    getTokenInLogin();
                     //保存token到本地
                     if(!mytoken.isEmpty()){
                         saveTokenToLocal();
@@ -178,7 +185,6 @@ public class Login extends Activity {
                 return map;
             }
             };
-        getTokenInLogin();
         mRequestQueue.add(stringRequest);
     }
     /*get请求
